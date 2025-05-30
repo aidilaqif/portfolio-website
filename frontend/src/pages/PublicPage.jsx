@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Box, Container, Paper, Typography } from "@mui/material";
+import HeroSection from "../components/HeroSection";
 import config from "../config";
 
 function PublicPage() {
@@ -28,22 +30,25 @@ function PublicPage() {
         }
     };
     return (
-        <div style={{ padding: "20px", textAlign: "center" }}>
-            <h1>Public Portfolio Site</h1>
-            <p>Welcome to Aidil 'Aqif's Portfolio</p>
-            {/* API Status Section */}
-            <div style={{ margin: '20px 0', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
-                <h3>API Connection Test</h3>
-                <p><strong>Backend Health:</strong>{apiStatus}</p>
-                <p><strong>Public API:</strong>{publicAPI}</p>
-                <p><strong>API URL:</strong>{config.API_BASE_URL}</p>
-            </div>
-            <nav>
-                <Link to="/admin" style={{ color: "#61dafb", textDecoration: "underline" }}>
-                Go to Admin Dashboard
-                </Link>
-            </nav>
-        </div>
+        <Box>
+            <HeroSection />
+            {/* Temporary API Status Section */}
+            <Container maxWidth="md" sx={{ py: 4 }}>
+                <Paper elevation={3} sx={{ p: 3, textAlign: 'center' }}>
+                    <Typography variant="h6" gutterBottom>
+                        API Connection Test
+                    </Typography>
+                    <Typography><strong>Backend Health:</strong> {apiStatus}</Typography>
+                    <Typography><strong>Public API:</strong> {publicAPI}</Typography>
+                    {/* <Typography><strong>API URL:</strong> {config.API_BASE_URL}</Typography> */}
+                    <Box mt={2}>
+                        <Link to="/admin" style={{ color: "#1976d2", textDecoration: "underline" }}>
+                            Go to Admin Dashboard
+                        </Link>
+                    </Box>
+                </Paper>
+            </Container>
+        </Box>
     );
 }
 

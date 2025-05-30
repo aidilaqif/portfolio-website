@@ -28,7 +28,7 @@ function AdminPage() {
             <div style={{ margin: '20px 0', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
                 <h3>Admin API Test</h3>
                 <p><strong>Admin API:</strong> {adminAPI}</p>
-                <p><strong>API URL:</strong> {config.API_BASE_URL}</p>
+                {/* <p><strong>API URL:</strong> {config.API_BASE_URL}</p> */}
             </div>
 
             <nav>
