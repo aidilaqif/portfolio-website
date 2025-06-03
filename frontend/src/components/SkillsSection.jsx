@@ -52,7 +52,7 @@ function SkillsSection() {
     return (
         <Box
             sx={{
-                background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
+                background: '#0a0a0a',
                 color: 'white',
                 py: 8
             }}
@@ -122,7 +122,7 @@ function SkillsSection() {
                                     '&:hover': {
                                         bgcolor: 'rgba(255, 255, 255, 0.1)',
                                         border: `2px solid ${getCategoryColor(skill.category)}`,
-                                        transform: 'translateY(-8px)',
+                                        transform: 'translateY(-2px)',
                                         boxShadow: `0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px ${getCategoryColor(skill.category)}40`,
                                     },
                                     '&::before': {

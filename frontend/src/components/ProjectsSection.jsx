@@ -42,7 +42,7 @@ function ProjectsSection() {
     return (
         <Box
             sx={{
-                background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
+                background: '#0a0a0a',
                 minHeight: '100vh',
                 py: 8,
                 position: 'relative',
@@ -53,11 +53,6 @@ function ProjectsSection() {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundImage: `
-                        radial-gradient(circle at 20% 50%, rgba(120, 120, 120, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(120, 120, 120, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(120, 120, 120, 0.1) 0%, transparent 50%)
-                    `,
                     pointerEvents: 'none'
                 }
             }}
