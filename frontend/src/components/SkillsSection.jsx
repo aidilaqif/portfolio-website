@@ -52,7 +52,7 @@ function SkillsSection() {
     return (
         <Box
             sx={{
-                background: 'linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%)',
+                background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
                 color: 'white',
                 py: 8
             }}

@@ -4,6 +4,7 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 import HeroSection from "../components/HeroSection";
 import config from "../config";
 import SkillsSection from "../components/SkillsSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 function PublicPage() {
     const [apiStatus, setApiStatus] = useState("Testing...");
@@ -34,6 +35,7 @@ function PublicPage() {
         <Box>
             <HeroSection />
             <SkillsSection />
+            <ProjectsSection />
             {/* Temporary API Status Section */}
             <Container maxWidth="md" sx={{ py: 4 }}>
                 <Paper elevation={3} sx={{ p: 3, textAlign: 'center' }}>
