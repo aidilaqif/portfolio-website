@@ -3,48 +3,55 @@ import { Box, Typography, Container, Paper } from '@mui/material';
 import { 
     SiFlutter, 
     SiReact, 
-    SiNodedotjs, 
     SiVuedotjs, 
+    SiCodeigniter, 
+    SiNodedotjs, 
     SiMysql, 
     SiPostgresql, 
-    SiPython, 
     SiDocker, 
-    SiAmazondynamodb, 
-    SiCplusplus,
-    SiGit,
-    SiCodeigniter
+    SiGitlab, 
+    SiGit, 
+    SiAmazons3,
+    SiPython
 } from 'react-icons/si';
-import { FaServer, FaJava, FaAmazon } from 'react-icons/fa';
+import { FaServer } from 'react-icons/fa';
 
 function SkillsSection() {
     const skills = [
-        // Advanced Skills
-        { name: 'Flutter', category: 'advanced', icon: SiFlutter, color: '#02569B' },
-        { name: 'React', category: 'advanced', icon: SiReact, color: '#61DAFB' },
-        { name: 'Node.js', category: 'advanced', icon: SiNodedotjs, color: '#339933' },
-        { name: 'Vue.js', category: 'advanced', icon: SiVuedotjs, color: '#4FC08D' },
-        { name: 'CodeIgniter 4', category: 'advanced', icon: SiCodeigniter, color: '#EF4223' },
-        { name: 'Git', category: 'advanced', icon: SiGit, color: '#F05032' },
-        
-        // Moderate Skills
-        { name: 'MySQL', category: 'moderate', icon: SiMysql, color: '#4479A1' },
-        { name: 'PostgreSQL', category: 'moderate', icon: SiPostgresql, color: '#336791' },
-        { name: 'Python', category: 'moderate', icon: SiPython, color: '#3776AB' },
-        { name: 'Java', category: 'moderate', icon: FaJava, color: '#007396' },
-        { name: 'Docker', category: 'moderate', icon: SiDocker, color: '#2496ED' },
-        { name: 'REST API', category: 'moderate', icon: FaServer, color: '#FF6B35' },
-        
-        // Beginner Skills
-        { name: 'AWS', category: 'beginner', icon: FaAmazon, color: '#FF9900' },
-        { name: 'DynamoDB', category: 'beginner', icon: SiAmazondynamodb, color: '#3F48CC' },
-        { name: 'C++', category: 'beginner', icon: SiCplusplus, color: '#00599C' },
+        // === Frontend Development ===
+        { name: 'Flutter', category: 'Frontend', icon: SiFlutter, color: '#02569B' },
+        { name: 'React', category: 'Frontend', icon: SiReact, color: '#61DAFB' },
+        { name: 'Vue.js', category: 'Frontend', icon: SiVuedotjs, color: '#4FC08D' },
+        { name: 'CodeIgniter 4', category: 'Frontend', icon: SiCodeigniter, color: '#EF4223' },
+
+        // === Backend Development ===
+        { name: 'Node.js', category: 'Backend', icon: SiNodedotjs, color: '#339933' },
+        { name: 'REST API', category: 'Backend', icon: FaServer, color: '#FF6B35' },
+        { name: 'Python', category: 'Backend', icon: SiPython, color: '#3776AB' },
+
+        // === Database Management ===
+        { name: 'MySQL', category: 'Database', icon: SiMysql, color: '#4479A1' },
+        { name: 'PostgreSQL', category: 'Database', icon: SiPostgresql, color: '#336791' },
+
+        // === DevOps & Tools ===
+        { name: 'Docker', category: 'DevOps & Tools', icon: SiDocker, color: '#2496ED' },
+        { name: 'Git', category: 'DevOps & Tools', icon: SiGit, color: '#F05032' },
+        { name: 'GitLab', category: 'DevOps & Tools', icon: SiGitlab, color: '#FC6D26' },
+        { name: 'AWS S3', category: 'DevOps & Tools', icon: SiAmazons3, color: '#FF9900' },
+
+        // === Soft Skills ===
+        { name: 'Analytical Thinking', category: 'Soft Skills', icon: FaServer, color: '#00e676' },
+        { name: 'Workflow Optimization', category: 'Soft Skills', icon: FaServer, color: '#ffa726' },
+        { name: 'Collaboration', category: 'Soft Skills', icon: FaServer, color: '#42a5f5' },
     ];
 
     const getCategoryColor = (category) => {
-        switch(category) {
-            case 'advanced': return '#00e676';
-            case 'moderate': return '#ffa726';
-            case 'beginner': return '#42a5f5';
+        switch (category) {
+            case 'Frontend': return '#00e676';
+            case 'Backend': return '#ffa726';
+            case 'Database': return '#42a5f5';
+            case 'DevOps & Tools': return '#ab47bc';
+            case 'Soft Skills': return '#29b6f6';
             default: return '#ffffff';
         }
     };
@@ -54,7 +61,7 @@ function SkillsSection() {
             sx={{
                 background: '#0a0a0a',
                 color: 'white',
-                py: 8
+                py: 8,
             }}
         >
             <Container maxWidth="lg">
@@ -71,7 +78,7 @@ function SkillsSection() {
                         variant="h6" 
                         sx={{ opacity: 0.8, maxWidth: '600px', mx: 'auto' }}
                     >
-                        Technologies and tools I work with
+                        Technologies, tools, and capabilities I apply in development and deployment.
                     </Typography>
                 </Box>
 
@@ -82,9 +89,7 @@ function SkillsSection() {
                         gap: 3,
                         pb: 2,
                         px: 2,
-                        '&::-webkit-scrollbar': {
-                            height: 8,
-                        },
+                        '&::-webkit-scrollbar': { height: 8 },
                         '&::-webkit-scrollbar-track': {
                             background: 'rgba(255, 255, 255, 0.1)',
                             borderRadius: 4,
@@ -92,9 +97,7 @@ function SkillsSection() {
                         '&::-webkit-scrollbar-thumb': {
                             background: 'rgba(250, 255, 255, 0.3)',
                             borderRadius: 4,
-                            '&:hover': {
-                                background: 'rgba(255, 255, 255, 0.5)',
-                            },
+                            '&:hover': { background: 'rgba(255, 255, 255, 0.5)' },
                         },
                     }}
                 >
@@ -136,9 +139,7 @@ function SkillsSection() {
                                         opacity: 0,
                                         transition: 'opacity 0.3s ease',
                                     },
-                                    '&:hover::before': {
-                                        opacity: 1,
-                                    }
+                                    '&:hover::before': { opacity: 1 },
                                 }}
                             >
                                 <IconComponent 
@@ -169,15 +170,17 @@ function SkillsSection() {
                     sx={{ 
                         display: 'flex', 
                         justifyContent: 'center', 
-                        gap: 4, 
+                        gap: 3, 
                         mt: 4,
                         flexWrap: 'wrap'
                     }}
                 >
                     {[
-                        { name: 'Advanced', color: '#00e676' },
-                        { name: 'Moderate', color: '#ffa726' },
-                        { name: 'Beginner', color: '#42a5f5' }
+                        { name: 'Frontend', color: '#00e676' },
+                        { name: 'Backend', color: '#ffa726' },
+                        { name: 'Database', color: '#42a5f5' },
+                        { name: 'DevOps & Tools', color: '#ab47bc' },
+                        { name: 'Soft Skills', color: '#29b6f6' }
                     ].map((category, index) => (
                         <Box 
                             key={index}

@@ -1,101 +1,139 @@
 import React from 'react';
-import { Box, Typography, Container, Button, Stack } from '@mui/material';
-import { LinkedIn, GitHub, Email, Phone } from '@mui/icons-material';
+import {
+  Box,
+  Typography,
+  Container,
+  Button,
+  Grid,
+  Stack
+} from '@mui/material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
+import ProfilePhoto from './ProfilePhoto';
 
 function HeroSection() {
-    return (
-        <Box
-            sx={{
-                background: '#0a0a0a',
-                color: 'white',
-                minHeight: '100vh',
-                display: 'flex',
-                alignItems: 'center',
-                py: 8
-            }}
+  return (
+    <Box
+      sx={{
+        background: '#0a0a0a',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        py: 8,
+      }}
+    >
+      <Container maxWidth="xl">
+        <Grid
+          container
+          spacing={6}
+          alignItems="center"
+          justifyContent="center"
         >
-            <Container maxWidth="md">
-                <Box textAlign="center">
-                    <Typography 
-                        variant="h2" 
-                        component="h1" 
-                        gutterBottom
-                        sx={{ fontWeight: 'bold', mb: 2 }}
-                    >
-                        Aidil 'Aqif Mohd Pidaus
-                    </Typography>
+          {/* === Left: Profile Photo === */}
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              textAlign: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <ProfilePhoto size={220} />
+          </Grid>
 
-                    <Typography 
-                        variant="h4" 
-                        component="h2" 
-                        gutterBottom
-                        sx={{ fontWeight: 300, mb: 3 }}
-                    >
-                        Junior Software Engineer
-                    </Typography>
+          {/* === Right: Intro Text + Buttons === */}
+          <Grid item xs={12} md={7}>
+            <Box>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'white',
+                  mb: 1,
+                }}
+              >
+                Aidil 'Aqif Mohd Pidaus
+              </Typography>
 
-                    <Typography 
-                        variant="h6" 
-                        sx={{ mb: 4, maxWidth: '600px', mx: 'auto', lineHeight: 1.6 }}
-                    >
-                        Results-driven software engineer with expertise in full-stack development. 
-                        Proficient in Flutter, React, Node.js, and modern web technologies.
-                    </Typography>
+              <Typography
+                variant="h4"
+                sx={{
+                  color: 'rgba(255,255,255,0.8)',
+                  mb: 3,
+                }}
+              >
+                Software Engineer
+              </Typography>
 
-                    <Stack 
-                        direction="row" 
-                        spacing={2} 
-                        justifyContent="center"
-                        sx={{ mb: 4 }}
-                    >
-                        <Button
-                            variant="contained"
-                            size="large"
-                            startIcon={<LinkedIn />}
-                            href="https://linkedin.com/in/aidilaqif"
-                            target="_blank"
-                            sx={{ 
-                                bgcolor: 'rgba(255,255,255,0.2)', 
-                                '&:hover': { bgcolor: 'rgba(255,255,255,0.3)' }
-                            }}
-                        >
-                            LinkedIn
-                        </Button>
-                        
-                        <Button
-                            variant="contained"
-                            size="large"
-                            startIcon={<GitHub />}
-                            href="https://github.com/aidilaqif"
-                            target="_blank"
-                            sx={{ 
-                                bgcolor: 'rgba(255,255,255,0.2)', 
-                                '&:hover': { bgcolor: 'rgba(255,255,255,0.3)' }
-                            }}
-                        >
-                            GitHub
-                        </Button>
-                    </Stack>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: 'rgba(255,255,255,0.7)',
+                  maxWidth: 600,
+                  mb: 5,
+                  lineHeight: 1.6,
+                }}
+              >
+                Results-oriented Software Engineer experienced in full-stack development,
+                system enhancement, and workflow automation. Proficient in Flutter,
+                CodeIgniter 4, React, and MySQL with a collaborative and analytical
+                approach to delivering scalable solutions.
+              </Typography>
 
-                    <Stack 
-                        direction={{ xs: 'column', sm: 'row' }} 
-                        spacing={3} 
-                        justifyContent="center"
-                        sx={{ opacity: 0.9 }}
-                    >
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                            <Email sx={{ mr: 1 }} />
-                            <Typography>aidil.aqif@gmail.com</Typography>
-                        </Box>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                            <Phone sx={{ mr: 1 }} />
-                            <Typography>+6013-7587307</Typography>
-                        </Box>
-                    </Stack>
-                </Box>
-            </Container>
-        </Box>
-    );
+              <Stack
+                direction="row"
+                spacing={2}
+                justifyContent={{ xs: 'center', md: 'flex-start' }}
+              >
+                <Button
+                  variant="contained"
+                  startIcon={<LinkedIn />}
+                  href="https://linkedin.com/in/aidilaqif"
+                  target="_blank"
+                  sx={{
+                    bgcolor: 'rgba(255,255,255,0.2)',
+                    color: 'white',
+                    textTransform: 'none',
+                    fontSize: '1rem',
+                    borderRadius: 2,
+                    px: 3,
+                    py: 1,
+                    '&:hover': {
+                      bgcolor: 'rgba(255,255,255,0.3)',
+                    },
+                  }}
+                >
+                  LinkedIn
+                </Button>
+
+                <Button
+                  variant="contained"
+                  startIcon={<GitHub />}
+                  href="https://github.com/aidilaqif"
+                  target="_blank"
+                  sx={{
+                    bgcolor: 'rgba(255,255,255,0.2)',
+                    color: 'white',
+                    textTransform: 'none',
+                    fontSize: '1rem',
+                    borderRadius: 2,
+                    px: 3,
+                    py: 1,
+                    '&:hover': {
+                      bgcolor: 'rgba(255,255,255,0.3)',
+                    },
+                  }}
+                >
+                  GitHub
+                </Button>
+              </Stack>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
 }
 
 export default HeroSection;
