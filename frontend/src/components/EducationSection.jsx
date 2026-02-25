@@ -25,6 +25,7 @@ function EducationSection() {
       description: 'CGPA: 3.70',
       highlights: [
         "Dean’s List Award – Semesters 1, 2, 6, 7 & 8",
+        "Best FYP Project for Department of Software Engineering",
         "Best Team Project Award – Software Engineering Team Project Finale",
         "Anugerah Pemacu Dana Recipient"
       ]
@@ -35,7 +36,8 @@ function EducationSection() {
       period: 'June 2020 – April 2021',
       description: 'CGPA: 4.00',
       highlights: [
-        'First-Class Honour Award'
+        'First-Class Honour Award',
+        'Mentor for Peer-Assisted Learning (PAL) Programme',
       ]
     },
     {
@@ -120,6 +122,7 @@ function EducationSection() {
                     borderRadius: 2,
                     backdropFilter: 'blur(10px)',
                     transition: 'all 0.3s ease',
+                    textAlign: 'left',
                     '&:hover': {
                       bgcolor: 'rgba(255, 255, 255, 0.08)',
                       transform: 'translateY(-4px)',

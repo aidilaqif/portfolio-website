@@ -33,7 +33,7 @@ function ContactSection() {
     {
       icon: LocationOn,
       label: 'Location',
-      value: 'Johor, Malaysia',
+      value: 'Selangor, Malaysia',
       link: null
     }
   ];

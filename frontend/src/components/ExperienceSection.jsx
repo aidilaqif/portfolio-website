@@ -19,9 +19,22 @@ import { Work } from '@mui/icons-material';
 function ExperienceSection() {
   const experiences = [
     {
+      title: 'System Analyst',
+      company: 'Tenaga Nasional Berhad',
+      period: 'January 2026 – Present',
+      description: 'Development, Enhancement and Testing',
+      highlights: [
+        'Functional engineer for ERMS MM module.',
+        'Analyzed PR–PO–GR and contract procurement workflows.',
+        'Performed SIT/UAT for Change Requests and functional enhancements.',
+        'Managed CR handover from external vendors.',
+        'Validated requirements with business and technical teams.'
+      ],
+    },
+    {
       title: 'Programmer',
       company: 'Zanko Sdn Bhd',
-      period: 'October 2025 – Present',
+      period: 'October 2025 – December 2025',
       description: 'System Enhancement & Workflow Automation',
       highlights: [
         'Supported development of Johor State digital systems focusing on UI/UX enhancement, workflow automation, and maintenance.',
@@ -113,6 +126,7 @@ function ExperienceSection() {
                     borderRadius: 2,
                     backdropFilter: 'blur(10px)',
                     transition: 'all 0.3s ease',
+                    textAlign: 'left',
                     '&:hover': {
                       bgcolor: 'rgba(255, 255, 255, 0.08)',
                       transform: 'translateY(-4px)',

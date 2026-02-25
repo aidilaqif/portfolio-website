@@ -12,7 +12,8 @@ import {
     SiGitlab, 
     SiGit, 
     SiAmazons3,
-    SiPython
+    SiPython,
+    SiSap,
 } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
 
@@ -28,6 +29,7 @@ function SkillsSection() {
         { name: 'Node.js', category: 'Backend', icon: SiNodedotjs, color: '#339933' },
         { name: 'REST API', category: 'Backend', icon: FaServer, color: '#FF6B35' },
         { name: 'Python', category: 'Backend', icon: SiPython, color: '#3776AB' },
+        { name: 'SAP', category: 'Backend', icon: SiSap, color: '#3776AB' },
 
         // === Database Management ===
         { name: 'MySQL', category: 'Database', icon: SiMysql, color: '#4479A1' },
